@@ -39,7 +39,7 @@ def length_of_longest_substring_n3(s):
             seen.add(s[j])
             max_length = max(max_length, j - i + 1)
     return max_length
-    pass
+    
 def length_of_longest_substring_n2(s):
     """
     Finds the length of the longest substring without repeating characters
@@ -56,7 +56,6 @@ def length_of_longest_substring_n2(s):
 
     for i in range(n):
         seen = set()
-        freq = [0] * 128
         for j in range(i, n):
             char = s[j]
             if char in seen:
@@ -64,8 +63,7 @@ def length_of_longest_substring_n2(s):
             seen.add(char)
             max_length = max(max_length, j - i + 1)
     return max_length
-    pass
-# TODO: implement this function. You may delete this comment when you are done.
+
 def length_of_longest_substring_n(s):
     """
     Finds the length of the longest substring without repeating characters
@@ -91,4 +89,3 @@ def length_of_longest_substring_n(s):
         char_index[char] = right
         max_length = max(max_length, right - left + 1)
     return max_length
-    pass
